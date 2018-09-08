@@ -3,7 +3,7 @@ package lexer
 import (
 	"testing"
 
-	"monkey/token"
+	"github.com/clintonpuge/puge/src/token"
 )
 
 func TestNextToken(t *testing.T) {
@@ -29,7 +29,7 @@ func TestNextToken(t *testing.T) {
 		`
 
 	tests := []struct {
-		expectedType    token.TokenType
+		expectedType    token.Type
 		expectedLiteral string
 	}{
 		{token.LET, "let"},
@@ -102,7 +102,7 @@ func TestNextToken(t *testing.T) {
 		{token.INT, "10"},
 		{token.SEMICOLON, ";"},
 		{token.INT, "10"},
-		{token.NOT_EQ, "!="},
+		{token.NotEQ, "!="},
 		{token.INT, "9"},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
